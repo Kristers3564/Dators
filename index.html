@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+       <style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home 
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+        <title>Datortīkli</title>
+        <link rel="stylesheet" href="CSS/mansStils.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h1> Kas tas ir?</h1>
+        <div style="font-size: 30px">Datortīkli</div>
+        <p><b>Datortīkls</b> ir datu pārraides sistēma, kas savieno dažādās vietās esošus datorus. <br> Tīklu veido aparatūra un programmatūra, kas nodrošina tīkla aparatūras funkcionēšanu.
+Darbs datortīklā lietotājiem sniedz dažādas priekšrocības kā iespēju savstarpēji apmainīties ar informāciju, piemēram, nosūtīt dokumentu citam cilvēkam, kas atrodas tajā pašā ēkā vai pat citā valstī, izmantot kopīgas datu bāzes, kurās var būt apkopota jebkura veida informācija, izmantot koplietošanas diskus, kuros glabājas dati, pie kuriem var piekļūt, piemēram, visi vienas skolas skolēni, iespēju lietot kopīgas perifērijas ierīces, piemēram, printeri, paaugstināt darba efektivitāti, izmantojot jaunās informācijas tehnoloģijas, piemēram, rīkot videokonferences.
+<br> Kā galveno trūkumu darbam datortīklā var minēt drošības samazināšanos. It sevišķi tas raksturīgs darbam datortīklā Internet, kurā lietotāja informāciju apdraud datorvīrusi, zagšanas mēģinājumi u. tml.
+Datortīklos parasti tiek izmantota klientservera arhitektūra, kas paredz datu apstrādes procesu sadalīt starp klientu un serveri. Serveris ir dators, kas nodrošina citiem tīkla datoriem koplietošanas pakalpojumus, piemēram, informācijas glabāšanu, printera lietošanu. Klients ir dators, kas pieprasa serverim kādu pakalpojumu, piemēram, nosūta dokumentu izdrukāšanai vai nolasa informāciju no servera diska. Serveris vienlaikus var apkalpot vairākus klientus.</p>
+        <img src="images/h.jpg" alt="BLACK MONKEYS EATING BANANAS">
+        <br>Apmeklē <a href="https://www.geeksforgeeks.org/">
+GeeksforGeeks</a> priekš vairāk informācijas.
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+         
+    </body>
+</html>
